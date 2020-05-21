@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport  shrink-to-fit=no">
+  
+    <title>Welcome page</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/cover/">
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    <!-- Favicons -->
+   <link href="{%static 'assets/img/favicons.ico' %}" rel="icon">
+    <link href="{%static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  
+     <!-- Favicons bootstrap -->
+  <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+  <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#563d7c">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="{%static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{%static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="{%static 'assets/css/style.css' %}" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+ <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+   
+      <div class="d-flex">
+       
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="container">
+      
+          <div role="main" class="inner cover" id="text">
+          <h1 class="cover-heading">POLLING UNIT RESULT CHECKER</h1>
+          <!-- <p class="lead">Test of Speed,Intelligience and Accuracy</p> -->
+        
+          <div class="card-footer text-muted" id="bottomDesign">
+          <button class="button"  id="begin" style="vertical-align:middle"><a href="{% url 'unit' %}"><span>Polling Unit Results</span></a></button>
+          <button class="button"  id="begin" style="vertical-align:middle"><a href="{% url 'sumunit' %}"><span>LGA Results</span></a></button>
+          <button class="button"  id="begin" style="vertical-align:middle"><a href="{% url 'newunit' %}"><span>Add Polling Unit Results</span></a></button>
+          </div> 
+         </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+<!--  -->
+<a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+<div id="preloader"></div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Vendor JS Files -->
+<script src="{%static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{%static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{%static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{%static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<script src="{%static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{%static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+<script src="{%static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+<script src="{%static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{%static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{%static 'assets/vendor/aos/aos.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{%static 'assets/js/main.js' %}"></script>
+</body>
+</html>
