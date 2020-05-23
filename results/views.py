@@ -18,16 +18,12 @@ def UnitSolutionViews (request):
         print(request.GET['unit_unique_id'])
         return render(request,'unit_solution.html',context)
     else:
-        return render (request,'unit_solution.html',{'error':'empty form'})
-
-def UnitViews(request):
-    return render(request,'unit.html')
+        return render (request,'unit_solution.html')
 
 
 
 
-def SumUnitViews (request):
-    return render(request,'sumunit.html')
+
 
 def SumUnitSolutionViews(request):
     Apu=AnnouncedPuResults.objects.all()
@@ -46,11 +42,11 @@ def SumUnitSolutionViews(request):
                     Pol_parties[k['party_abbreviation']] += k['party_score']
 
                 else:
-                    Pol_parties[k['party_abbreviation']] = 0
+                    Pol_parties[k['party_abbreviation']] = k['party_score']
         context={'pol_parties':Pol_parties,'number_pu':len(id_list)}
         return render(request,'sumunit_solution.html',context)
     else:
-        return render(request,'sumunit_solution.html',{'error':'populate required fields'})
+        return render(request,'sumunit_solution.html')
 
 def NewUnitViews (request):
     return render(request,'newunit.html')

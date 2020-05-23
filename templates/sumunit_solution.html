@@ -27,7 +27,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="{%url 'unit'%}">PU Results</a>
+                <a class="nav-item nav-link" href="{%url 'unit_solution'%}">PU Results</a>
                 <a class="nav-item nav-link active" href="">LGA Results<span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="{%url 'newunit'%}">New PU</a>
             </div>
@@ -39,6 +39,23 @@
 <div class="container">
     <div class="row">
         <!-- =====PROVIDE QUERY CONDITIONS== -->
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Enter Details to Query</div>
+          <div class="card-body">
+          <form action="{%url 'sumunit_solution'%}">
+            {% csrf_token %}
+              <h5>State ID</h5>
+              <input  name="state_id"  required="required" type="number" placeholder="Enter state id">
+              <hr>
+              <h5>LGA ID</h5>
+              <input  name="lga_id"  required="required" type="number" placeholder="Enter lga id">
+              <hr>
+              <input type="submit"class="btn btn-primary" value="SUM"/>
+          </form>
+      </div>
+      </div>
+
+
     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
         <div class="card-header">RESULTS</div>
         <div class="card-body">
@@ -48,7 +65,7 @@
             {%endfor%}
         </div>
     </div>
-    <h4 style='color:red'>{{error}}</h4>
+    <!-- <h4 style='color:red'>{{error}}</h4> -->
 
     </div>
     </div>

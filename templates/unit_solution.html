@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active" href="">PU Results<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="{%url 'sumunit'%}">LGA Results</a>
+            <a class="nav-item nav-link" href="{%url 'sumunit_solution'%}">LGA Results</a>
             <a class="nav-item nav-link" href="{%url 'newunit'%}">New PU</a> 
             </div>
         </div>
@@ -38,6 +38,19 @@
     <div class="container">
     <div class="row">
         <!-- =====PROVIDE QUERY CONDITIONS== -->
+        
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Enter Details to Query</div>
+          <div class="card-body">
+          <form action="{%url 'unit_solution'%}" >
+              {% csrf_token %}
+              <h5>Unit Unique ID</h5>
+              <input  name="unit_unique_id"  required="required" type="number" placeholder="Enter ward id"/>
+              <hr>
+              <input type="submit" class="btn btn-primary" value="Fetch"/>
+          </form>
+          </div>
+      </div>
 
     <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
         <div class="card-header">RESULTS</div>
@@ -49,7 +62,7 @@
             {%endfor%}
         </div>
     </div>
-    <h4 style='color:red'>{{error}}</h4>
+    <!-- <h4 style='color:red'>{{error}}</h4> -->
 
     </div>
     </div>
