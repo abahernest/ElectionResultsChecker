@@ -8,6 +8,8 @@ django = "*"
 python-decouple = "*"
 django-heroku = "*"
 mysqlclient = "*"
+gunicorn = "==19.9.0"
+whitenoise = "*"
 
 [dev-packages]
 
